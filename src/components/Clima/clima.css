@@ -1,0 +1,42 @@
+.clima-container{
+    border: 0.5px solid rgb(218, 218, 218);
+    border-radius: 10px;
+    padding: 15px;
+    width: 50%;
+    display: flex;
+    color: rgb(94, 94, 94);
+}
+
+.clima-block-left{
+    width: 50%;
+}
+
+.clima-block-right{
+    width: 50%;
+    margin-top: auto;
+    text-align: right;
+}
+
+h2, h3, h4, h5{
+    font-weight: 200;
+}
+
+.temperatura-visor{
+    font-size: 90px;
+    font-weight: 250;
+}
+
+.img-visor{
+    vertical-align: initial;
+}
+
+.temperatura-change{
+    font-weight: 100;
+    font-size: 20px;
+    color: silver;
+}
+
+.temperatura-change:hover{
+    color: orange;
+    text-decoration: none;
+}
