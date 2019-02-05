@@ -5,6 +5,7 @@
     width: 50%;
     display: flex;
     color: rgb(94, 94, 94);
+    margin: auto;
 }
 
 .clima-block-left{
