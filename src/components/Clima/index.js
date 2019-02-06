@@ -136,7 +136,7 @@ class Clima extends Component{
     getCoordenadasUsuario(){
         var geoOptions = {maximumAge: 75000, timeout: 15000};
         if (navigator.geolocation){
-            navigator.geolocation.getCurrentPosition(this.geoSuccess.bind(this), this.geoError, geoOptions);
+            navigator.geolocation.getCurrentPosition(this.geoSuccess.bind(this), this.geoError.bind(this), geoOptions);
         }
         else{
             console.log("Su navegador no soporta la API de geolocalización.");
