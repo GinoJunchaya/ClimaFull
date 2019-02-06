@@ -12,10 +12,10 @@ class Clima extends Component{
             climaApiKey: "894da49a97d24e28b9b225614190402",
             mapboxApiKey: "pk.eyJ1IjoiZ2lub2p1bmNoYXlhIiwiYSI6ImNqcnM3djQzaTFudG00NGw5M3d2NmY3ajUifQ.aPQrAClI7neKrXEwua_QwQ",
             ciudad: "Asunción",
-            medidaTemperatura: "C",
-            temperaturaMostrar: undefined,
-            coordenadas: undefined,
             localizacionMostrar: "Asunción",
+            temperaturaMostrar: undefined,
+            medidaTemperatura: "C",            
+            coordenadas: undefined
         };
     }
 
@@ -96,7 +96,6 @@ class Clima extends Component{
                     datosClima: undefined,
                     loading: false
                 });
-                console.log(err);
             }.bind(this),
             timeout: 3000
         });
@@ -111,7 +110,6 @@ class Clima extends Component{
             type: "GET",            
             url: "https://api.mapbox.com/geocoding/v5/mapbox.places/" + coordenadas.longitude + "," + coordenadas.latitude + ".json?access_token=" + this.state.mapboxApiKey,
             success: function (res) {
-                console.log(res);
                 this.setState({
                     localizacionMostrar: res.features[0].place_name,
                     ciudad: res.features[1].text
@@ -139,9 +137,6 @@ class Clima extends Component{
         if (navigator.geolocation){
             navigator.geolocation.getCurrentPosition(this.geoSuccess.bind(this), this.geoError.bind(this), geoOptions);
         }
-        else{
-            console.log("Su navegador no soporta la API de geolocalización.");
-        }
     }
 
     geoSuccess(position){
@@ -150,7 +145,6 @@ class Clima extends Component{
     }
 
     geoError(){
-        console.log("Error");
         this.setState({coordenadas: undefined, loading: false});
     }
 
