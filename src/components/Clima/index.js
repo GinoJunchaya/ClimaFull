@@ -150,7 +150,7 @@ class Clima extends Component{
 
     geoError(){
         console.log("Error");
-        this.setState({coordenadas: undefined});
+        this.setState({coordenadas: undefined, loading: false});
     }
 
 }
