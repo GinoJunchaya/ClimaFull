@@ -114,7 +114,7 @@ class Clima extends Component{
                 console.log(res);
                 this.setState({
                     localizacionMostrar: res.features[0].place_name,
-                    ciudad: res.features[1].place_name
+                    ciudad: res.features[1].text
                 }, this.getClimaActual.bind(this));
             }.bind(this),
             error: function(xhr, status, err){
