@@ -15,7 +15,7 @@ class Clima extends Component{
             medidaTemperatura: "C",
             temperaturaMostrar: undefined,
             coordenadas: undefined,
-            localizacionMostrar: undefined,
+            localizacionMostrar: "Asunción",
         };
     }
 
