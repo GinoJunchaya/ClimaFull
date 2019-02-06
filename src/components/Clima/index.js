@@ -111,6 +111,7 @@ class Clima extends Component{
             type: "GET",            
             url: "https://api.mapbox.com/geocoding/v5/mapbox.places/" + coordenadas.longitude + "," + coordenadas.latitude + ".json?access_token=" + this.state.mapboxApiKey,
             success: function (res) {
+                console.log(res);
                 this.setState({
                     localizacionMostrar: res.features[0].place_name,
                     ciudad: res.features[1].place_name
