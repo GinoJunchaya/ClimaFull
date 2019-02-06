@@ -73,7 +73,7 @@ class Clima extends Component{
                     <section className="clima-block-right">
                         <h4><b>Visiblidad:</b> {datosClima.current.vis_km} km</h4>
                         <h4><b>Humedad:</b> {datosClima.current.humidity}%</h4>
-                        <button onClick={this.getCoordenadasUsuario.bind(this)}>Actualizar</button>
+                        <button className="btn-actualizar" onClick={this.getCoordenadasUsuario.bind(this)}>Actualizar</button>
                     </section>
                 </section>
         );
